@@ -18,7 +18,7 @@ class _LoadingPageState extends State<LoadingPage> {
           children: <Widget> [
             Image.asset("images/logo.png"),
             Text(
-                "Share the jounery with friends…",
+                "Share the jounery with friend.",
                 style: TextStyle(
                   fontSize: 18.0,
                   color: Colors.grey[500],
