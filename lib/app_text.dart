@@ -12,8 +12,13 @@ class AppText {
     return Localizations.of<AppText>(context, AppText);
   }
 
-  String get(String name, [List<String> params]) {
-    String text = MyLocalizations.localizedValues[_locale.languageCode][name];
+  /// The order of params is same as the order in which the strings were defined, for example:
+  /// Defining string on MyLocalizations.localizedValues - "path": "From {param} to {param}"
+  /// Then, invoking AppText.get(context, "path", ["Beijing", "Shanghai"]) will return string:
+  /// "From Beijing to Shanghai"
+  static String get(BuildContext context, String name, [List<String> params]) {
+    AppText appText = Localizations.of(context, AppText);
+    String text = MyLocalizations.localizedValues[appText._locale.languageCode][name];
     if (params == null) {
       return text;
     } else {

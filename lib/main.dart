@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return MaterialApp(
-      onGenerateTitle: (BuildContext context) => AppText.of(context).get("title"),
+      onGenerateTitle: (BuildContext context) => AppText.get(context, "title"),
       theme: ThemeData(
 
       ),

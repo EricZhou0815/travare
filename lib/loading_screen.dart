@@ -16,7 +16,7 @@ class LoadingPage extends StatelessWidget {
             ),
           ),
           Text(
-            AppText.of(context).get("greeting"),
+            AppText.get(context, "greeting"),
             style: Theme.of(context)
                 .textTheme
                 .body1
