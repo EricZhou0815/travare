@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travare/app_text.dart';
 
 class LoadingPage extends StatelessWidget {
   @override
@@ -11,11 +12,11 @@ class LoadingPage extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(bottom: 15.0),
             child: Image.asset(
-              "images/logo.png",
+              "assets/images/logo.png",
             ),
           ),
           Text(
-            "Share the jounery \r\nwith friends...",
+            AppText.of(context).get("greeting"),
             style: Theme.of(context)
                 .textTheme
                 .body1
