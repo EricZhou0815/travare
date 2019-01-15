@@ -9,7 +9,7 @@ class Location{
       return this._placeName;
   }
 
-  set location(String alocation){
+  set place(String alocation){
      this._placeName=alocation;
   }
 
